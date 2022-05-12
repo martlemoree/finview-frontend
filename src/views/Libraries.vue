@@ -1,10 +1,10 @@
 <template>
-  <h1>Welcome to Debts</h1>
+  <h1>Welcome to Libraries</h1>
 </template>
 
 <script>
 export default {
-  name: 'Debts'
+  name: 'Libraries'
 }
 </script>
 
