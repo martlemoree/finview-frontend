@@ -1,3 +1,5 @@
+[![CI](https://github.com/martlemoree/libview-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/martlemoree/libview-frontend/actions/workflows/ci.yml)
+
 # libview
 
 # project task for module WebTech at HTW for Business Informatics studies
