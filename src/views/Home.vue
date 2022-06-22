@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Hello World!"/>
+    <img alt="Vue logo" src="../assets/logo.png" height="240" width="180">
+    <HelloWorld msg="Welcome to libview!"/>
   </div>
 </template>
 

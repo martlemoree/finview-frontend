@@ -9,7 +9,7 @@
         <ul class="navbar-nav">
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to="/libraries">Libraries</router-link>
-          <router-link class="nav-link" to="/about">Abput</router-link>
+          <router-link class="nav-link" to="/about">About</router-link>
         </ul>
       </div>
     </div>

@@ -1,38 +1,24 @@
 <template>
   <h1>Welcome to Libraries</h1>
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col" v-for="library in libraries" :key="library.id">
-      <div class="col">
-        <div class="card">
-          <img :src="getImage(library)" class="card-img-top" :alt="library.libraryName">
-          <div class="card-body">
-            <h5 class="card-title">{{ library.libraryName }}</h5>
-            <p class="card-text">
-              {{ library.libraryName }} ist eine {{ library.programmingLanguage }} Bibliothek.
-              Die neueste Version ist die {{ library.latestVersion }} und es wird für {{ library.useField }} benutzt.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="container-fluid">
+      <library-list :libraries="this.libraries"></library-list>
     </div>
-  </div>
+    <library-form></library-form>
 </template>
 
 <script>
+import LibraryList from '@/components/LibraryList'
+import LibraryForm from '@/components/LibraryForm'
+
 export default {
   name: 'Libraries',
+  components: {
+    LibraryForm,
+    LibraryList
+  },
   data () {
     return {
       libraries: []
-    }
-  },
-  methods: {
-    getImage (library) {
-      if (library.programmingLanguage === 'PYTHON') {
-        return require('../assets/python.png')
-      } else if (library.programmingLanguage === 'JAVASCRIPT') {
-        return require('../assets/javascript.png')
-      }
     }
   },
   mounted () {
