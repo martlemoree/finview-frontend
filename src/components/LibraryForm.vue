@@ -20,27 +20,27 @@
         <label for="programming-language" class="form-label">Programming Language</label>
         <select id="programming-language" class="form-select" v-model="programmingLanguage" required>
           <option value="" selected disabled>Choose...</option>
-          <option value="JAVASCRIPT">Javascript</option>
-          <option value="PYTHON">Python</option>
-          <option value="JAVA">Java</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
           <option value="PHP">PHP</option>
           <option value="CSS">CSS</option>
-          <option value="CSHARP">C#</option>
-          <option value="CPLUSPLUS">C++</option>
-          <option value="TYPESCRIPT">Typescript</option>
-          <option value="RUBY">Ruby</option>
+          <option value="C#">C#</option>
+          <option value="C++">C++</option>
+          <option value="TypeScript">TypeScript</option>
+          <option value="Ruby">Ruby</option>
           <option value="C">C</option>
-          <option value="SWIFT">Swift</option>
+          <option value="Swift">Swift</option>
           <option value="R">R</option>
-          <option value="OBJECTIVEC">Objective C</option>
-          <option value="SHELL">Shell</option>
-          <option value="SCALA">Scala</option>
-          <option value="GO">Go</option>
-          <option value="POWERSHELL">Powershell</option>
-          <option value="KOTLIN">Kotlin</option>
-          <option value="RUST">Rust</option>
-          <option value="DART">Dart</option>
-          <option value="OTHER">other</option>
+          <option value="Objective-C">Objective-C</option>
+          <option value="Shell">Shell</option>
+          <option value="Scala">Scala</option>
+          <option value="Go">Go</option>
+          <option value="PowerShell">PowerShell</option>
+          <option value="Kotlin">Kotlin</option>
+          <option value="Rust">Rust</option>
+          <option value="Dart">Dart</option>
+          <option value="other">other</option>
         </select>
         <div class="invalid-feedback">
           Please select a programming language or choose 'other'.
