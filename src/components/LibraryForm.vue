@@ -60,6 +60,10 @@
           Please provide the field of use.
         </div>
       </div>
+      <div class="mb-3">
+        <label for="website" class="form-label">Website</label>
+        <input type="text" class="form-control" id="website" v-model="website">
+      </div>
       <div v-if="this.serverValidationMessages">
         <ul>
           <li v-for="(message, index) in serverValidationMessages" :key="index" style="color: red">
@@ -85,6 +89,11 @@ export default {
       programmingLanguage: '',
       latestVersion: '',
       useField: '',
+      website: '',
+      upvotes: 0,
+      downvotes: 0,
+      createdAt: '',
+      updatedAt: '',
       serverValidationMessages: []
     }
   },
@@ -101,7 +110,12 @@ export default {
           libraryName: this.libraryName,
           programmingLanguage: this.programmingLanguage,
           latestVersion: this.latestVersion,
-          useField: this.useField
+          useField: this.useField,
+          website: this.website,
+          upvotes: this.upvotes,
+          downvotes: this.downvotes,
+          createdAt: this.createdAt,
+          updatedAt: this.updatedAt
         })
 
         const requestOptions = {
