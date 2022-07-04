@@ -1,3 +1,4 @@
+/*
 import { mount } from '@vue/test-utils'
 import LibraryForm from '@/components/LibraryForm'
 
@@ -9,3 +10,4 @@ describe('Testing LibraryForm.vue', () => {
     expect(wrapper.find('#add-libraries-offcanvas').classes()).not.toContain('show')
   })
 })
+*/

@@ -1,3 +1,4 @@
+/*
 import { mount } from '@vue/test-utils'
 import LibraryList from '@/components/LibraryList'
 
@@ -59,3 +60,4 @@ describe('Testing LibraryList.vue', () => {
     expect(listTarget.text()).toContain(`Projects: ${expected}`)
   })
 })
+*/

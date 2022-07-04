@@ -126,7 +126,7 @@ export default {
       }
     },
     getHot (library) {
-      if (library.upvotes > 10 && library.createdAt === '2022-7-5' | '2022-7-4' | '2022-7-3') {
+      if (library.upvotes > 10 && (library.createdAt === '2022-7-5' | library.createdAt === '2022-7-4' | library.createdAt === '2022-7-3')) {
         return require('../assets/hot.png')
       }
     },
