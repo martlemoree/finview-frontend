@@ -24,10 +24,7 @@
                   Projects: <!--{{ library.projects.length }}-->
                 </div>
                 <div class="col-3">
-                  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button @click="getUpvote" type="button" class="btn btn-success">Up {{ library.upvotes }}</button>
-                    <button @click="getDownvote" type="button" class="btn btn-danger">Down {{ library.downvotes }}</button>
-                  </div>
+                  Score: {{ library.upvotes }} ups, {{ library.downvotes }} downs
                 </div>
               </div>
             </div>
@@ -35,6 +32,11 @@
         </h2>
         <div :id="'panelsStayOpen-collapseOne'+library.id" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne"> <!-- dynamsiche id (library.id) -->
           <div class="accordion-body">
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+              <button @click="getUpvote" type="button" class="btn btn-success">upvote</button>
+              <button @click="getDownvote" type="button" class="btn btn-danger">downvote</button>
+            </div>
+            <p></p>
             <p><strong>Website:</strong> <a :href="library.website">{{ library.website }}</a></p>
             <p>The {{ library.libraryName }} library is written in {{ library.programmingLanguage }}.<br>
               At the moment the latest version is <code>{{ library.latestVersion }}</code>.<br>
@@ -114,17 +116,17 @@ export default {
       library.downvotes += 1
     },
     getNew (library) {
-      if (library.createdAt === '2022-7-1') {
+      if (library.createdAt === '2022-7-5') {
         return require('../assets/new.png')
       }
     },
     getUpdate (library) {
-      if (library.updatedAt === '2022-7-1') {
+      if (library.updatedAt === '2022-7-5') {
         return require('../assets/update.png')
       }
     },
     getHot (library) {
-      if (library.upvotes > 10 && library.upvotes <= 100 && library.upvotes > library.downvotes) {
+      if (library.upvotes > 10 && library.createdAt === '2022-7-5' | '2022-7-4' | '2022-7-3') {
         return require('../assets/hot.png')
       }
     },
