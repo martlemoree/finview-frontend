@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <library-list :libraries="this.libraries"></library-list>
     </div>
-    <library-form></library-form>
+    <library-form @created="addLibrary"></library-form>
 </template>
 
 <script>
@@ -19,6 +19,20 @@ export default {
   data () {
     return {
       libraries: []
+    }
+  },
+  methods: {
+    addLibrary (libraryLocation) {
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + libraryLocation
+      const requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      }
+
+      fetch(endpoint, requestOptions)
+        .then(response => response.json())
+        .then(library => this.libraries.push(library))
+        .catch(error => console.log('error', error))
     }
   },
   mounted () {
